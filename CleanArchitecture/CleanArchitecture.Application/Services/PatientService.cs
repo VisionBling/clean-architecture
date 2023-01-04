@@ -19,11 +19,7 @@ namespace CleanArchitecture.Application.Services
             _patientRepository = patientRepository;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="patientDto"></param>
-        /// <returns></returns>
+       
       
         public async Task<PatientDto> AddPatientAsync(PatientCreationDto patientDto)
         {
