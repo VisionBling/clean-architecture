@@ -29,10 +29,7 @@ namespace CleanArchitecture.Application.Services
 
             return new PatientDto { Id = patient.Id, Name = patient.Name };
         }
-        /// <summary>
-        /// get all patients
-        /// </summary>
-        /// <returns></returns>
+       
         public async Task<IEnumerable<PatientDto>> GetAllPatientsAsync()
         {
             var patients = await _patientRepository.GetAllAsync();
