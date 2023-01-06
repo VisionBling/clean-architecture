@@ -14,11 +14,7 @@ namespace CleanArchitecture.Infrastructure.Data.Repositories
         public AppointmentRepository(ApplicationDbContext context) : base(context)
         {
         }
-        /// <summary>
-        /// get doctor by appointment 
-        /// </summary>
-        /// <param name="doctorId"></param>
-        /// <returns></returns>
+        
         public async Task<IEnumerable<Appointment>> GetAppointmentsByDoctorIdAsync(Guid doctorId)
         {
             return await _context.Appointments
