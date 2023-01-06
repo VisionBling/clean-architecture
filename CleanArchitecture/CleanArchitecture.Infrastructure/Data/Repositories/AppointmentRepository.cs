@@ -15,7 +15,7 @@ namespace CleanArchitecture.Infrastructure.Data.Repositories
         {
         }
         /// <summary>
-        /// 
+        /// get doctor by appointment 
         /// </summary>
         /// <param name="doctorId"></param>
         /// <returns></returns>
