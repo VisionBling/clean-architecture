@@ -18,6 +18,13 @@ namespace CleanArchitecture.WebAPI.Controllers
         }
 
        
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="patientDto"></param>
+        /// <returns></returns>
+
         [HttpPost]
         public async Task<IActionResult> AddPatient([FromBody] PatientCreationDto patientDto)
         {
