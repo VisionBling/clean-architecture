@@ -20,7 +20,7 @@ namespace CleanArchitecture.WebAPI.Controllers
        
 
         /// <summary>
-        /// 
+        /// get 
         /// </summary>
         /// <param name="patientDto"></param>
         /// <returns></returns>
