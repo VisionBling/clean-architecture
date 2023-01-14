@@ -32,6 +32,10 @@ namespace CleanArchitecture.WebAPI.Controllers
             return CreatedAtAction(nameof(AddPatient), new { id = createdPatient.Id }, createdPatient);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
       
         [HttpGet]
         public async Task<IActionResult> GetAll()
