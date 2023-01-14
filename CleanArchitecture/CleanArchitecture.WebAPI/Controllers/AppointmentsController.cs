@@ -16,11 +16,7 @@ namespace CleanArchitecture.WebAPI.Controllers
             _appointmentService = appointmentService;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="appointmentDto"></param>
-        /// <returns></returns>
+       
         [HttpPost]
         public async Task<ActionResult<AppointmentDto>> ScheduleAppointment([FromBody] AppointmentCreationDto appointmentDto)
         {
