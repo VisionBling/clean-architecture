@@ -10,11 +10,7 @@ namespace CleanArchitecture.WebAPI.Controllers
     public class AppointmentsController : ControllerBase
     {
         private readonly IAppointmentService _appointmentService;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="appointmentService"></param>
+>
         public AppointmentsController(IAppointmentService appointmentService)
         {
             _appointmentService = appointmentService;
