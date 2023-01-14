@@ -11,11 +11,20 @@ namespace CleanArchitecture.WebAPI.Controllers
     {
         private readonly IAppointmentService _appointmentService;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="appointmentService"></param>
         public AppointmentsController(IAppointmentService appointmentService)
         {
             _appointmentService = appointmentService;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="appointmentDto"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<ActionResult<AppointmentDto>> ScheduleAppointment([FromBody] AppointmentCreationDto appointmentDto)
         {
