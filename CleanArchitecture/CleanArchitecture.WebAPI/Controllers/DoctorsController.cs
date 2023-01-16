@@ -16,11 +16,7 @@ namespace CleanArchitecture.WebAPI.Controllers
             _doctorService = doctorService;
         }
 
-        /// <summary>
-        /// add doctor
-        /// </summary>
-        /// <param name="doctorDto"></param>
-        /// <returns></returns>
+       
         [HttpPost]
         public async Task<ActionResult<DoctorDto>> AddDoctor([FromBody] DoctorCreationDto doctorDto)
         {
