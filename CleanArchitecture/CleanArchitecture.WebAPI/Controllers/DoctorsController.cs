@@ -29,7 +29,7 @@ namespace CleanArchitecture.WebAPI.Controllers
         }
 
       /// <summary>
-      /// 
+      /// get all doctors
       /// </summary>
       /// <returns></returns>
         [HttpGet]
