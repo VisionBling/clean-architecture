@@ -12,10 +12,7 @@ namespace CleanArchitecture.Infrastructure.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="options"></param>
+       
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
        : base(options)
         {
