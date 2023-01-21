@@ -24,10 +24,7 @@ namespace CleanArchitecture.WebAPI.Controllers
             return CreatedAtAction(nameof(ScheduleAppointment), new { id = scheduledAppointment.Id }, scheduledAppointment);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+       
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AppointmentDto>>> GetAll()
         {
