@@ -15,11 +15,7 @@ namespace CleanArchitecture.Infrastructure.Data.Repositories
         public PatientRepository(ApplicationDbContext context) : base(context)
         {
         }
-        /// <summary>
-        /// get patient with appt
-        /// </summary>
-        /// <param name="patientId"></param>
-        /// <returns></returns>
+       
         public async Task<Patient> GetPatientWithAppointmentsAsync(Guid patientId)
         {
             return await _context.Patients
