@@ -14,6 +14,10 @@ namespace CleanArchitecture.Application.Services
     {
         private readonly IDoctorRepository _doctorRepository;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="doctorRepository"></param>
         public DoctorService(IDoctorRepository doctorRepository)
         {
             _doctorRepository = doctorRepository;
