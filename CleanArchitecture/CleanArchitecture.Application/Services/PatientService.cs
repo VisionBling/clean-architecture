@@ -31,7 +31,7 @@ namespace CleanArchitecture.Application.Services
         }
        
         /// <summary>
-        /// 
+        /// gert all patient 
         /// </summary>
         /// <returns></returns>
         public async Task<IEnumerable<PatientDto>> GetAllPatientsAsync()
