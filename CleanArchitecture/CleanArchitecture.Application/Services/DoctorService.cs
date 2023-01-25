@@ -14,20 +14,12 @@ namespace CleanArchitecture.Application.Services
     {
         private readonly IDoctorRepository _doctorRepository;
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="doctorRepository"></param>
+        
         public DoctorService(IDoctorRepository doctorRepository)
         {
             _doctorRepository = doctorRepository;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="doctorDto"></param>
-        /// <returns></returns>
         public async Task<DoctorDto> AddDoctorAsync(DoctorCreationDto doctorDto)
         {
             var doctor = new Doctor(doctorDto.Name, doctorDto.Specialization);
