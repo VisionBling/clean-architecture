@@ -18,11 +18,7 @@ namespace CleanArchitecture.Application.Services
         {
             _appointmentRepository = appointmentRepository;
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="appointmentDto"></param>
-        /// <returns></returns>
+  
         public async Task<AppointmentDto> ScheduleAppointmentAsync(AppointmentCreationDto appointmentDto)
         {
             var appointment = new Appointment(appointmentDto.PatientId, appointmentDto.DoctorId, appointmentDto.AppointmentDate);          
@@ -31,10 +27,7 @@ namespace CleanArchitecture.Application.Services
             return new AppointmentDto { Id = appointment.Id, PatientId = appointment.PatientId, DoctorId = appointment.DoctorId, AppointmentDate = appointment.AppointmentDate };
         }
 
-        /// <summary>
-        /// Get All Appointment 
-        /// </summary>
-        /// <returns></returns>
+       
         public async Task<IEnumerable<AppointmentDto>> GetAllAppointmentsAsync()
         {
             var appointments = await _appointmentRepository.GetAllAsync();
