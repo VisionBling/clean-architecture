@@ -20,11 +20,7 @@ namespace CleanArchitecture.Application.Services
         }
 
        
-     /// <summary>
-     /// 
-     /// </summary>
-     /// <param name="patientDto"></param>
-     /// <returns></returns>
+    
         public async Task<PatientDto> AddPatientAsync(PatientCreationDto patientDto)
         {
             var patient = new Patient(patientDto.Name);
