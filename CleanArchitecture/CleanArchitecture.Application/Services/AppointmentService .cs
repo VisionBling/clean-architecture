@@ -19,6 +19,11 @@ namespace CleanArchitecture.Application.Services
             _appointmentRepository = appointmentRepository;
         }
   
+        /// <summary>
+        /// se=chedul appointment 
+        /// </summary>
+        /// <param name="appointmentDto"></param>
+        /// <returns></returns>
         public async Task<AppointmentDto> ScheduleAppointmentAsync(AppointmentCreationDto appointmentDto)
         {
             var appointment = new Appointment(appointmentDto.PatientId, appointmentDto.DoctorId, appointmentDto.AppointmentDate);          
