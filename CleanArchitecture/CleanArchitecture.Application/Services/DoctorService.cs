@@ -24,6 +24,11 @@ namespace CleanArchitecture.Application.Services
             _doctorRepository = doctorRepository;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="doctorDto"></param>
+        /// <returns></returns>
         public async Task<DoctorDto> AddDoctorAsync(DoctorCreationDto doctorDto)
         {
             var doctor = new Doctor(doctorDto.Name, doctorDto.Specialization);
