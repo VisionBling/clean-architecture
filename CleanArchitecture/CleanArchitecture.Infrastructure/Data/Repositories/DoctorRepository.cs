@@ -15,7 +15,6 @@ namespace CleanArchitecture.Infrastructure.Data.Repositories
         {
         }
 
-        // Get doctor 
         public async Task<IEnumerable<Doctor>> GetDoctorsBySpecializationAsync(string specialization)
         {
             return await _context.Doctors
