@@ -16,7 +16,7 @@ namespace CleanArchitecture.Infrastructure.Data.Repositories
         {
         }
 
-        // Get patient with appointment objecy 
+        // Get patient with 
         public async Task<Patient> GetPatientWithAppointmentsAsync(Guid patientId)
         {
             return await _context.Patients
