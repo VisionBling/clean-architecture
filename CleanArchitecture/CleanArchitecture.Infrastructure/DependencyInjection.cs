@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 namespace Microsoft.Extensions.DependencyInjection;
     public static class DependencyInjection
     {
+
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
@@ -22,6 +23,7 @@ namespace Microsoft.Extensions.DependencyInjection;
 
             });
 
+        // inject repository 
             services.AddScoped<IPatientRepository, PatientRepository>();
             services.AddScoped<IAppointmentRepository, AppointmentRepository>();
             services.AddScoped<IDoctorRepository, DoctorRepository>();
