@@ -23,7 +23,7 @@ namespace Microsoft.Extensions.DependencyInjection;
 
             });
 
-        //   
+        
             services.AddScoped<IPatientRepository, PatientRepository>();
             services.AddScoped<IAppointmentRepository, AppointmentRepository>();
             services.AddScoped<IDoctorRepository, DoctorRepository>();
