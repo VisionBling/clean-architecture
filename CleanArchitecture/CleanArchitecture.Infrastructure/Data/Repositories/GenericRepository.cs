@@ -20,7 +20,7 @@ namespace CleanArchitecture.Infrastructure.Data.Repositories
             _entities = context.Set<TEntity>();
         }
 
-        // gen
+        
         public async Task<TEntity> GetByIdAsync(Guid id)
         {
             return await _entities.FindAsync(id);
