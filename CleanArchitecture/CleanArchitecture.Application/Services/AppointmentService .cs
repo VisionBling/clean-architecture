@@ -21,6 +21,7 @@ namespace CleanArchitecture.Application.Services
 
         public async Task<AppointmentDto> ScheduleAppointmentAsync(AppointmentCreationDto appointmentDto)
         {
+            // instantiant appt
             var appointment = new Appointment(appointmentDto.PatientId, appointmentDto.DoctorId, appointmentDto.AppointmentDate);
             await _appointmentRepository.AddAsync(appointment);
             await _appointmentRepository.SaveChangesAsync();
