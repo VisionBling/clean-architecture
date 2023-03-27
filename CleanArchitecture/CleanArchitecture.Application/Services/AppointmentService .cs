@@ -22,7 +22,7 @@ namespace CleanArchitecture.Application.Services
         public async Task<AppointmentDto> ScheduleAppointmentAsync(AppointmentCreationDto appointmentDto)
         {
             var appointment = new Appointment(appointmentDto.PatientId, appointmentDto.DoctorId, appointmentDto.AppointmentDate);
-            // add modification of tha appt serivce in the repo 
+            // add modification 
             await _appointmentRepository.AddAsync(appointment);
             await _appointmentRepository.SaveChangesAsync();
             return new AppointmentDto { Id = appointment.Id, PatientId = appointment.PatientId, DoctorId = appointment.DoctorId, AppointmentDate = appointment.AppointmentDate };
