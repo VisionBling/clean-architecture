@@ -31,7 +31,10 @@ namespace CleanArchitecture.Application.Services
             await _doctorRepository.SaveChangesAsync();
             return new DoctorDto { Id = doctor.Id, Name = doctor.Name, Specialization = doctor.Specialization };
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<DoctorDto>> GetAllDoctorsAsync()
         {
             var doctors = await _doctorRepository.GetAllAsync();
