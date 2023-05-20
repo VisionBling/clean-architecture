@@ -1,6 +1,7 @@
 ﻿using CleanArchitecture.Application.Interfaces.Repositories;
 using CleanArchitecture.Infrastructure.Data;
 using CleanArchitecture.Infrastructure.Data.Repositories;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -9,8 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitecture.Infrastructure
-{
+namespace Microsoft.Extensions.DependencyInjection;
     public static class DependencyInjection
     {
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
@@ -29,4 +29,4 @@ namespace CleanArchitecture.Infrastructure
             return services;
         }
     }
-}
+
