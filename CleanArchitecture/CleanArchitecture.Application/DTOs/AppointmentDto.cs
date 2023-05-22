@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace CleanArchitecture.Application.DTOs
 {
-    internal class AppointmentDto
+    public class AppointmentCreationDto
     {
+        public Guid PatientId { get; set; }
+        public Guid DoctorId { get; set; }
+        public DateTime AppointmentDate { get; set; }
     }
+
+    public class AppointmentDto: AppointmentCreationDto
+    {
+        public Guid Id { get; set; }
+       
+    }
+
 }

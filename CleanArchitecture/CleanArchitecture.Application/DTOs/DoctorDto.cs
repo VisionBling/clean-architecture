@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace CleanArchitecture.Application.DTOs
 {
-    public class DoctorDto
+    public class DoctorDto: DoctorCreationDto
     {
         public Guid Id { get; set; }
+    }
+    public class DoctorCreationDto
+    {
         public string Name { get; set; }
+        public string Specialization { get; set; }
     }
 }

@@ -13,11 +13,11 @@ namespace CleanArchitecture.Domain.Entities
         public string Specialization { get; private set; }
         public List<Appointment> Appointments { get; private set; }
 
-        public Doctor(string name)
+        public Doctor(string name, string specialization)
         {
             Id = Guid.NewGuid();
             Name = name;
-            Specialization = Specialization;
+            Specialization = specialization;
             Appointments = new List<Appointment>();
 
         }
