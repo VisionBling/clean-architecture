@@ -19,7 +19,6 @@ namespace CleanArchitecture.Domain.Entities
             Appointments = new List<Appointment>();
 
         }
-        // Methods to manipulate the Patient entity, including adding appointments
         public void AddAppointment(Appointment appointment)
         {
             Appointments.Add(appointment);
