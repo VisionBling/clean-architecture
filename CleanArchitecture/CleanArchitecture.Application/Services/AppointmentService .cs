@@ -12,9 +12,9 @@ namespace CleanArchitecture.Application.Services
 {
     public class AppointmentService : IAppointmentService
     {
-        private readonly IGenericRepository<Appointment> _appointmentRepository;
+        private readonly IAppointmentRepository _appointmentRepository;
 
-        public AppointmentService(IGenericRepository<Appointment> appointmentRepository)
+        public AppointmentService(IAppointmentRepository appointmentRepository)
         {
             _appointmentRepository = appointmentRepository;
         }
