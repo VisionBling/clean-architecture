@@ -1,21 +1,31 @@
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+# Dockerfile for CleanArchitecture.WebAPI
+
+# Use the official ASP.NET Core runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+# Use the official .NET SDK image for building the application
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["CleanArchitecture/CleanArchitecture.csproj", ""]
-RUN dotnet restore "./CleanArchitecture.csproj"
+
+# Copy the solution and restore dependencies
+COPY CleanArchitecture.sln ./
+COPY CleanArchitecture.WebAPI/CleanArchitecture.WebAPI.csproj CleanArchitecture.WebAPI/
+RUN dotnet restore CleanArchitecture.WebAPI/CleanArchitecture.WebAPI.csproj
+
+# Copy the rest of the application code and build it
 COPY . .
-WORKDIR "/src/."
-RUN dotnet build "CleanArchitecture/CleanArchitecture.csproj" -c Release -o /app/build
+WORKDIR /src/CleanArchitecture.WebAPI
+RUN dotnet build CleanArchitecture.WebAPI.csproj -c Release -o /app/build
 
+# Publish the application
 FROM build AS publish
-RUN dotnet publish "CleanArchitecture/CleanArchitecture.csproj" -c Release -o /app/publish
+RUN dotnet publish CleanArchitecture.WebAPI.csproj -c Release -o /app/publish
 
+# Use the runtime image for the final stage
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "CleanArchitecture.dll"]
-
+ENTRYPOINT ["dotnet", "CleanArchitecture.WebAPI.dll"]
