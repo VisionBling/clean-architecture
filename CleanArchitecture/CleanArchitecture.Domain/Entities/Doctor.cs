@@ -10,11 +10,16 @@ namespace CleanArchitecture.Domain.Entities
     {
         public Guid Id { get; private set; }
         public string Name { get; private set; }
+        public string Specialization { get; private set; }
+        public List<Appointment> Appointments { get; private set; }
 
         public Doctor(string name)
         {
             Id = Guid.NewGuid();
             Name = name;
+            Specialization = Specialization;
+            Appointments = new List<Appointment>();
+
         }
     }
 

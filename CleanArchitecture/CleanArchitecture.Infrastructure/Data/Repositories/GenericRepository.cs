@@ -1,4 +1,5 @@
 ﻿using CleanArchitecture.Application.Interfaces;
+using CleanArchitecture.Application.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
