@@ -73,6 +73,7 @@ Clean Architecture is centered around the Domain and Application layers, promoti
 **Presentation Layer**: In this case, the ASP.NET Core Web API, responsible for delivering HTTP responses to the client, parsing requests, and handing them off to the application layer for processing.
 
 
+
 <img width="941" alt="image" src="https://github.com/ulomaramma/clean-architecture/assets/26364572/2658b7ed-f822-47df-b12f-7a1e0f65df9f">
 
 
@@ -83,9 +84,9 @@ After running the application, navigate to http://localhost:Port/swagger to see 
 We welcome contributions! If you'd like to improve the guide, add examples, or correct any mistakes, please feel free to fork the repository and submit a pull request.
 
 Fork the repository.
-Create a new branch for your feature (git checkout -b feature/NewFeature).
-Commit your changes (git commit -am 'Add some NewFeature').
-Push to the branch (git push origin feature/NewFeature).
-Open a Pull Request
+1. Create a new branch for your feature (git checkout -b feature/NewFeature).
+2. Commit your changes (git commit -am 'Add some NewFeature').
+3. Push to the branch (git push origin feature/NewFeature).
+4. Open a Pull Request
 
 Thank you for checking out this guide. Don't forget to star the project if it helped you!
