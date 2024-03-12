@@ -15,7 +15,7 @@ If you find this project useful helpful as a starting template in implementing C
 - [Architecture Overview](#architecture-overview)
 - [Usage](#usage)
 - [Running the tests](#running-the-tests)
-- [Contributing](#contributing)
+- [How to Contribute](#how-to-contribute)
 
 ## Introduction to Clean Architecture
 Clean Architecture is a software design philosophy that separates the elements of a project into ringed levels, promoting the independence of system components. This approach ensures that the system is easy to maintain and evolve, particularly in complex applications with extensive business rules.
