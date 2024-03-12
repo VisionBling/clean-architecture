@@ -72,9 +72,9 @@ Clean Architecture is centered around the Domain and Application layers, promoti
 
 **Presentation Layer**: In this case, the ASP.NET Core Web API, responsible for delivering HTTP responses to the client, parsing requests, and handing them off to the application layer for processing.
 
+Overview of the Project Structure is shown below 
 
-
-<img width="941" alt="image" src="https://github.com/ulomaramma/clean-architecture/assets/26364572/2658b7ed-f822-47df-b12f-7a1e0f65df9f">
+<img width="431" alt="image" src="https://github.com/ulomaramma/clean-architecture/assets/26364572/da2b4422-d81a-4272-a117-96de1e7d32d6">
 
 
 ### Usage
