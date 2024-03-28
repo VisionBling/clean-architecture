@@ -15,6 +15,7 @@ namespace CleanArchitecture.Infrastructure.Data.Repositories
         {
         }
 
+        // Get Appointment
         public async Task<IEnumerable<Appointment>> GetAppointmentsByDoctorIdAsync(Guid doctorId)
         {
             return await _context.Appointments
